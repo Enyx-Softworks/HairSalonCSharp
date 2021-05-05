@@ -148,7 +148,7 @@ namespace HairSalonCSharp
             }
 
             List<string> photoList = new List<string>();
-            photoList = Directory.EnumerateFiles(Path.Combine(@"D:\Projekte\HairSalonCSharp\Images\", newHair.lengthText), "*.jpg", SearchOption.TopDirectoryOnly).ToList();
+            photoList = Directory.EnumerateFiles(Path.Combine(Directory.GetParent(Application.StartupPath).Parent.FullName, "Images", newHair.lengthText), "*.jpg", SearchOption.TopDirectoryOnly).ToList();
             int ii = random.Next(0, photoList.Count - 1);
             newHair.photo = photoList[ii];
 
