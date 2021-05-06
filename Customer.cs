@@ -75,7 +75,7 @@ namespace HairSalonCSharp
 
     public class SpecialAttributes
     {
-        public int affection = 0;
+        public float affection = 0;
      
         public SpecialAttributes()
         {

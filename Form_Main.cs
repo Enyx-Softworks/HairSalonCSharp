@@ -16,6 +16,7 @@ namespace HairSalonCSharp
         private int idCounter = 0;
         private List<Customer> customerList = null;
         private Random random;
+        Customer currentCustomer = null;
 
         public Form_Main()
         {
@@ -36,6 +37,8 @@ namespace HairSalonCSharp
             {
                 int selIndex = Int32.Parse(listBox_Customers.SelectedItem.GetType().GetProperty("Value").GetValue(listBox_Customers.SelectedItem, null).ToString());
                 int index = customerList.FindIndex(x => x.id == selIndex);
+
+                currentCustomer = customerList[index];
 
                 label_Id.Text = customerList[index].id.ToString();
                 label_Name.Text = customerList[index].name.ToString();
@@ -171,5 +174,47 @@ namespace HairSalonCSharp
             return randomMood;
         }
 
+        private void button_RollDice_Click(object sender, EventArgs e)
+        {
+            int dice1Value = random.Next(0, 8);
+            int dice2Value = random.Next(0, 8);
+            int diceSum = dice1Value + dice2Value;
+
+            label_Dice1.Text = dice1Value.ToString();
+            label_Dice2.Text = dice2Value.ToString();
+            label_DiceSum.Text = diceSum.ToString();
+
+            currentCustomer.specialAttributes.affection += diceSum;
+
+            label_SpecialAffection.Text = currentCustomer.specialAttributes.affection.ToString();
+
+            RefreshAffectionText(currentCustomer);
+        }
+
+        private void RefreshAffectionText(Customer customer)
+        {
+            label_AffectionText.Text = "";
+
+            switch (customer.specialAttributes.affection)
+            {
+                case float n when (n >= 0 && n < 10):
+                    label_AffectionText.Text = customer.name + " likes you.";
+                    break;
+                case float n when (n >= 10 && n < 20):
+                    label_AffectionText.Text = customer.name + " likes you very much.";
+                    break;
+                case float n when (n >= 20 && n < 30):
+                    label_AffectionText.Text = customer.name + " is fond of you";
+                    break;
+                case float n when (n >= 30 && n < 40):
+                    label_AffectionText.Text = customer.name + " grabs yours penis and strokes it.";
+                    break;
+                case float n when (n >= 40 && n < 50):
+                    label_AffectionText.Text = customer.name + " takes your penis in her mouth and sucks on it.";
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

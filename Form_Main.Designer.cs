@@ -33,18 +33,23 @@ namespace HairSalonCSharp
             this.listBox_Customers = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label_HairCurrentComposition = new System.Windows.Forms.Label();
+            this.pictureBox_HairCurrentPhoto = new System.Windows.Forms.PictureBox();
+            this.panel_HairCurrentColor = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label_HairCurrentColor = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label_HairCurrentLength = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox_HairDesiredPhoto = new System.Windows.Forms.PictureBox();
-            this.label_HairCurrentColor = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel_HairCurrentColor = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label_HairDesiredComposition = new System.Windows.Forms.Label();
             this.panel_HairDesiredColor = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label_HairDesiredColor = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label_HairDesiredLength = new System.Windows.Forms.Label();
+            this.pictureBox_HairDesiredPhoto = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,19 +58,19 @@ namespace HairSalonCSharp
             this.label_Age = new System.Windows.Forms.Label();
             this.label_Gender = new System.Windows.Forms.Label();
             this.label_Name = new System.Windows.Forms.Label();
-            this.pictureBox_HairCurrentPhoto = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label_HairCurrentComposition = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label_HairDesiredComposition = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label_Mood = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label_SpecialAffection = new System.Windows.Forms.Label();
+            this.button_RollDice = new System.Windows.Forms.Button();
+            this.label_Dice1 = new System.Windows.Forms.Label();
+            this.label_Dice2 = new System.Windows.Forms.Label();
+            this.label_DiceSum = new System.Windows.Forms.Label();
+            this.label_AffectionText = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_HairCurrentPhoto)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_HairDesiredPhoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_HairCurrentPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // button_Start
@@ -115,6 +120,58 @@ namespace HairSalonCSharp
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Current State";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 61);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 13);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Composition:";
+            // 
+            // label_HairCurrentComposition
+            // 
+            this.label_HairCurrentComposition.AutoSize = true;
+            this.label_HairCurrentComposition.Location = new System.Drawing.Point(77, 61);
+            this.label_HairCurrentComposition.Name = "label_HairCurrentComposition";
+            this.label_HairCurrentComposition.Size = new System.Drawing.Size(145, 13);
+            this.label_HairCurrentComposition.TabIndex = 40;
+            this.label_HairCurrentComposition.Text = "label_HairCurrentComposition";
+            // 
+            // pictureBox_HairCurrentPhoto
+            // 
+            this.pictureBox_HairCurrentPhoto.Location = new System.Drawing.Point(238, 16);
+            this.pictureBox_HairCurrentPhoto.Name = "pictureBox_HairCurrentPhoto";
+            this.pictureBox_HairCurrentPhoto.Size = new System.Drawing.Size(130, 126);
+            this.pictureBox_HairCurrentPhoto.TabIndex = 39;
+            this.pictureBox_HairCurrentPhoto.TabStop = false;
+            // 
+            // panel_HairCurrentColor
+            // 
+            this.panel_HairCurrentColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel_HairCurrentColor.Location = new System.Drawing.Point(80, 42);
+            this.panel_HairCurrentColor.Name = "panel_HairCurrentColor";
+            this.panel_HairCurrentColor.Size = new System.Drawing.Size(34, 13);
+            this.panel_HairCurrentColor.TabIndex = 38;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Color:";
+            // 
+            // label_HairCurrentColor
+            // 
+            this.label_HairCurrentColor.AutoSize = true;
+            this.label_HairCurrentColor.Location = new System.Drawing.Point(120, 42);
+            this.label_HairCurrentColor.Name = "label_HairCurrentColor";
+            this.label_HairCurrentColor.Size = new System.Drawing.Size(112, 13);
+            this.label_HairCurrentColor.TabIndex = 36;
+            this.label_HairCurrentColor.Text = "label_HairCurrentColor";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -150,39 +207,23 @@ namespace HairSalonCSharp
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Target State";
             // 
-            // pictureBox_HairDesiredPhoto
+            // label11
             // 
-            this.pictureBox_HairDesiredPhoto.Location = new System.Drawing.Point(240, 16);
-            this.pictureBox_HairDesiredPhoto.Name = "pictureBox_HairDesiredPhoto";
-            this.pictureBox_HairDesiredPhoto.Size = new System.Drawing.Size(130, 126);
-            this.pictureBox_HairDesiredPhoto.TabIndex = 18;
-            this.pictureBox_HairDesiredPhoto.TabStop = false;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 61);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 13);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Composition:";
             // 
-            // label_HairCurrentColor
+            // label_HairDesiredComposition
             // 
-            this.label_HairCurrentColor.AutoSize = true;
-            this.label_HairCurrentColor.Location = new System.Drawing.Point(120, 42);
-            this.label_HairCurrentColor.Name = "label_HairCurrentColor";
-            this.label_HairCurrentColor.Size = new System.Drawing.Size(112, 13);
-            this.label_HairCurrentColor.TabIndex = 36;
-            this.label_HairCurrentColor.Text = "label_HairCurrentColor";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 42);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Color:";
-            // 
-            // panel_HairCurrentColor
-            // 
-            this.panel_HairCurrentColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel_HairCurrentColor.Location = new System.Drawing.Point(80, 42);
-            this.panel_HairCurrentColor.Name = "panel_HairCurrentColor";
-            this.panel_HairCurrentColor.Size = new System.Drawing.Size(34, 13);
-            this.panel_HairCurrentColor.TabIndex = 38;
+            this.label_HairDesiredComposition.AutoSize = true;
+            this.label_HairDesiredComposition.Location = new System.Drawing.Point(77, 61);
+            this.label_HairDesiredComposition.Name = "label_HairDesiredComposition";
+            this.label_HairDesiredComposition.Size = new System.Drawing.Size(147, 13);
+            this.label_HairDesiredComposition.TabIndex = 44;
+            this.label_HairDesiredComposition.Text = "label_HairDesiredComposition";
             // 
             // panel_HairDesiredColor
             // 
@@ -227,6 +268,14 @@ namespace HairSalonCSharp
             this.label_HairDesiredLength.Size = new System.Drawing.Size(123, 13);
             this.label_HairDesiredLength.TabIndex = 39;
             this.label_HairDesiredLength.Text = "label_HairDesiredLength";
+            // 
+            // pictureBox_HairDesiredPhoto
+            // 
+            this.pictureBox_HairDesiredPhoto.Location = new System.Drawing.Point(240, 16);
+            this.pictureBox_HairDesiredPhoto.Name = "pictureBox_HairDesiredPhoto";
+            this.pictureBox_HairDesiredPhoto.Size = new System.Drawing.Size(130, 126);
+            this.pictureBox_HairDesiredPhoto.TabIndex = 18;
+            this.pictureBox_HairDesiredPhoto.TabStop = false;
             // 
             // label5
             // 
@@ -308,50 +357,6 @@ namespace HairSalonCSharp
             this.label_Name.TabIndex = 47;
             this.label_Name.Text = "label_Name";
             // 
-            // pictureBox_HairCurrentPhoto
-            // 
-            this.pictureBox_HairCurrentPhoto.Location = new System.Drawing.Point(238, 16);
-            this.pictureBox_HairCurrentPhoto.Name = "pictureBox_HairCurrentPhoto";
-            this.pictureBox_HairCurrentPhoto.Size = new System.Drawing.Size(130, 126);
-            this.pictureBox_HairCurrentPhoto.TabIndex = 39;
-            this.pictureBox_HairCurrentPhoto.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 61);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 13);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "Composition:";
-            // 
-            // label_HairCurrentComposition
-            // 
-            this.label_HairCurrentComposition.AutoSize = true;
-            this.label_HairCurrentComposition.Location = new System.Drawing.Point(77, 61);
-            this.label_HairCurrentComposition.Name = "label_HairCurrentComposition";
-            this.label_HairCurrentComposition.Size = new System.Drawing.Size(145, 13);
-            this.label_HairCurrentComposition.TabIndex = 40;
-            this.label_HairCurrentComposition.Text = "label_HairCurrentComposition";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 61);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 13);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "Composition:";
-            // 
-            // label_HairDesiredComposition
-            // 
-            this.label_HairDesiredComposition.AutoSize = true;
-            this.label_HairDesiredComposition.Location = new System.Drawing.Point(77, 61);
-            this.label_HairDesiredComposition.Name = "label_HairDesiredComposition";
-            this.label_HairDesiredComposition.Size = new System.Drawing.Size(147, 13);
-            this.label_HairDesiredComposition.TabIndex = 44;
-            this.label_HairDesiredComposition.Text = "label_HairDesiredComposition";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -392,11 +397,65 @@ namespace HairSalonCSharp
             this.label_SpecialAffection.TabIndex = 57;
             this.label_SpecialAffection.Text = "label_SpecialAffection";
             // 
+            // button_RollDice
+            // 
+            this.button_RollDice.Location = new System.Drawing.Point(253, 316);
+            this.button_RollDice.Name = "button_RollDice";
+            this.button_RollDice.Size = new System.Drawing.Size(106, 43);
+            this.button_RollDice.TabIndex = 59;
+            this.button_RollDice.Text = "Roll";
+            this.button_RollDice.UseVisualStyleBackColor = true;
+            this.button_RollDice.Click += new System.EventHandler(this.button_RollDice_Click);
+            // 
+            // label_Dice1
+            // 
+            this.label_Dice1.AutoSize = true;
+            this.label_Dice1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Dice1.Location = new System.Drawing.Point(46, 327);
+            this.label_Dice1.Name = "label_Dice1";
+            this.label_Dice1.Size = new System.Drawing.Size(16, 18);
+            this.label_Dice1.TabIndex = 42;
+            this.label_Dice1.Text = "0";
+            // 
+            // label_Dice2
+            // 
+            this.label_Dice2.AutoSize = true;
+            this.label_Dice2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Dice2.Location = new System.Drawing.Point(105, 327);
+            this.label_Dice2.Name = "label_Dice2";
+            this.label_Dice2.Size = new System.Drawing.Size(16, 18);
+            this.label_Dice2.TabIndex = 60;
+            this.label_Dice2.Text = "8";
+            // 
+            // label_DiceSum
+            // 
+            this.label_DiceSum.AutoSize = true;
+            this.label_DiceSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_DiceSum.Location = new System.Drawing.Point(157, 327);
+            this.label_DiceSum.Name = "label_DiceSum";
+            this.label_DiceSum.Size = new System.Drawing.Size(32, 24);
+            this.label_DiceSum.TabIndex = 61;
+            this.label_DiceSum.Text = "99";
+            // 
+            // label_AffectionText
+            // 
+            this.label_AffectionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_AffectionText.Location = new System.Drawing.Point(385, 316);
+            this.label_AffectionText.Name = "label_AffectionText";
+            this.label_AffectionText.Size = new System.Drawing.Size(388, 43);
+            this.label_AffectionText.TabIndex = 62;
+            this.label_AffectionText.Text = "99";
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 375);
+            this.Controls.Add(this.label_AffectionText);
+            this.Controls.Add(this.label_DiceSum);
+            this.Controls.Add(this.label_Dice2);
+            this.Controls.Add(this.label_Dice1);
+            this.Controls.Add(this.button_RollDice);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label_SpecialAffection);
             this.Controls.Add(this.label12);
@@ -419,10 +478,10 @@ namespace HairSalonCSharp
             this.Text = "Hair Salon C#";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_HairCurrentPhoto)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_HairDesiredPhoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_HairCurrentPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,6 +522,11 @@ namespace HairSalonCSharp
         private System.Windows.Forms.Label label_Mood;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label_SpecialAffection;
+        private System.Windows.Forms.Button button_RollDice;
+        private System.Windows.Forms.Label label_Dice1;
+        private System.Windows.Forms.Label label_Dice2;
+        private System.Windows.Forms.Label label_DiceSum;
+        private System.Windows.Forms.Label label_AffectionText;
     }
 }
 
